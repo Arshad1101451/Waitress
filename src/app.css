@@ -1,0 +1,72 @@
+/* Shared visual language — ported 1:1 from waitress/customer/theme.py so
+   every screen picks up the same "shiny 3D" look: gradient-filled
+   containers, soft/strong shadows, italic bold text, hover/press scale. */
+:root {
+  --white: #ffffff;
+  --pink: #ff5da2;
+  --purple: #7b2ff7;
+  --light-purple: #c77dff;
+  --blue: #4cc9f0;
+  --yellow: #ffd166;
+  --dark-brown: #3e2723;
+  --maroon: #800000;
+
+  --bg: #faf6ff;
+  --surface: #ffffff;
+  --surface-2: #f1e9ff;
+  --text: #33235b;
+  --text-muted: #8a7ca8;
+  --brand: var(--purple);
+  --brand-dark: #5a1fc0;
+  --accent: var(--pink);
+  --success: #22c55e;
+  --danger: #ef476f;
+
+  --radius: 18px;
+  --font-display: "Pacifico", cursive;
+  --font-body: "Poppins", sans-serif;
+
+  --grad-brand: linear-gradient(135deg, var(--purple), var(--pink));
+  --grad-cool: linear-gradient(135deg, var(--blue), var(--purple));
+  --grad-sunny: linear-gradient(135deg, var(--yellow), var(--pink));
+  --grad-soft: linear-gradient(135deg, var(--light-purple), var(--blue));
+  --grad-header: linear-gradient(90deg, var(--purple), #9d4edd, var(--pink));
+
+  --shadow-soft: 0 6px 14px 1px rgba(123, 47, 247, 0.2);
+  --shadow-strong: 0 10px 24px 2px rgba(123, 47, 247, 0.33);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-purple);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
