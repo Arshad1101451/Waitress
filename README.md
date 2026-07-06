@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Waitress — Tauri port
 
 A rewrite of the Flet/Python "Project Waitress" suite (Customer, Admin,
@@ -213,3 +214,7 @@ changed for the better rather than being ported 1:1:
 - **Kiosk mode**: uses Tauri's window API (fullscreen/frameless/no-resize)
   best-effort; if unsupported on a given build target, the app just runs in
   a normal window rather than failing.
+=======
+# Waitress
+Waitress app for taking Food orders from customer
+>>>>>>> 068befd9d6353f93502c834f5e26be7ebde14a00
