@@ -20,9 +20,6 @@ on:
 jobs:
   build-windows:
     runs-on: windows-latest
-    defaults:
-      run:
-        working-directory: waitress-tauri
     steps:
       - uses: actions/checkout@v4
 
@@ -32,9 +29,9 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
-          cache-dependency-path: waitress-tauri/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install frontend dependencies
         run: npm ci
@@ -47,6 +44,6 @@ jobs:
         with:
           name: windows-installer
           path: |
-            waitress-tauri/src-tauri/target/release/bundle/msi/*.msi
-            waitress-tauri/src-tauri/target/release/bundle/nsis/*.exe
+            src-tauri/target/release/bundle/msi/*.msi
+            src-tauri/target/release/bundle/nsis/*.exe
           if-no-files-found: error
